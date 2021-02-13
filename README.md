@@ -1,7 +1,9 @@
 # Python-3.9.1
-Python 3.9.1
+Python 3.9.1 - MITCHELL's Library 
 
-The “Python library” contains several different kinds of components.
+This “Python library” contains several different kinds of components, mods, and experimental testing done by Mitchell.
+Treat it as such!
+
 It contains data types that would normally be considered part of the “core” of a language, such as numbers and lists. For
 these types, the Python language core defines the form of literals and places some constraints on their semantics, but does
 not fully define the semantics. (On the other hand, the language core does define syntactic properties like the spelling and
