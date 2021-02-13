@@ -2,6 +2,21 @@
 Python 3.9.1 - Released on February 13, 2021
 
 MITCHELL's Library 
+The main branch repositories will have no Modifications or Integrations done to Python 3.9.1 release, and the libraries archive
+can be downloaded and unpacked
+
+Download Python 3.9.1 Documentation
+Last updated on: Feb 13, 2021.
+
+Download the archive containing all the documents for this version of Python 3.9.1 in PDF, HTML, Plain Text, and EPUB check the main repository branch
+
+Unpacking
+Unix users should download the .tar.bz2 archives; these are bzipped tar archives and can be handled in the usual way using tar and the bzip2 program. The InfoZIP unzip program can be used to handle the ZIP archives if desired. The .tar.bz2 archives provide the best compression and fastest download times.
+
+Windows users can use the ZIP archives since those are customary on that platform. These are created on Unix using the InfoZIP zip program.
+
+Problems
+If you have comments or suggestions for the Python documentation, please send email to docs@python.org.
 
 This “Python library” contains several different kinds of components, modifications, experimental testing and integrations
 done by Justin Mitchell. Treat it as such! (MitchellTesla) revisions and experimental test repos may have bugs and issues.
