@@ -11,7 +11,7 @@ The 'main' branch has NO Modifications or Integrations to the Python 3.9.1 stabl
 
 
 To Download the archive containing all the documents for this version of Python 3.9.1 in 
-PDF, HTML, Plain Text, and EPUB clone or copy the main repository for the stable version or go to (docs.python.org)
+PDF, HTML, Plain Text, and/or EPUB clone the  'main'  repository for the stable version or go to (docs.python.org)
 
 
 
