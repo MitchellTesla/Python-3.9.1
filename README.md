@@ -1,14 +1,15 @@
 # Python-3.9.1
 Python 3.9.1 - Released on February 13, 2021
 MITCHELL (WIP)
-
-The main branch repositories has no Modifications or Integrations done to Python 3.9.1 release, and the standard libraries archive
-can be downloaded and unpacked. 
-
 This “Python library” contains several different kinds of components, modifications, and experimental testing 
-done by Justin Mitchell. Treat it as such! (MitchellTesla) revisions and experimental test repos may have bugs and issues.
+done by Justin Mitchell. Treat it as such! 
+(MitchellTesla) revisions and experimental test repos may have bugs and issues.
+The main branch repositories has no Modifications or Integrations done to Python 3.9.1 release, and the standard 
+libraries archive can be downloaded and unpacked. 
+
+
 To Download the archive containing all the documents for this version of Python 3.9.1 in 
-PDF, HTML, Plain Text, and EPUB clone or copy the main repository for the stable version or go to ( docs.python.org )
+PDF, HTML, Plain Text, and EPUB clone or copy the main repository for the stable version or go to (docs.python.org)
 
 Any and all other branches should be considered experimental development/testing that will be updated frequently, and not merged with main.
 
