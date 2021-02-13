@@ -2,11 +2,9 @@
 Python 3.9.1 - Released on February 13, 2021
 
 MITCHELL's Library 
-The main branch repositories will have no Modifications or Integrations done to Python 3.9.1 release, and the libraries archive
-can be downloaded and unpacked
 
-Download Python 3.9.1 Documentation
-Last updated on: Feb 13, 2021.
+The main branch repositories will have no Modifications or Integrations done to Python 3.9.1 release, and the libraries archive
+can be downloaded and unpacked. Python 3.9.1 Documentation 
 
 Download the archive containing all the documents for this version of Python 3.9.1 in PDF, HTML, Plain Text, and EPUB check the main repository branch
 
