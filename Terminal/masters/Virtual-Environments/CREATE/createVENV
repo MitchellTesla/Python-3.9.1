@@ -1,0 +1,208 @@
+The Execution of Virtual Environments - by Justin Mitchell
+
+Terminal instruction/walkthrough
+
+Python “Virtual Environments” allow Python packages to be installed in an isolated location for a particular application, rather than being installed globally. If you are looking to safely install global command line tools, see Installing stand alone command line tools.
+Imagine you have an application that needs version 1 of LibFoo, but another application requires version 2. How can you use both these applications? If you install everything into /usr/lib/python3.6/site-packages (or whatever your platform’s standard location is), it’s easy to end up in a situation where you unintentionally upgrade an application that shouldn’t be upgraded.
+Or more generally, what if you want to install an application and leave it be? If an application works, any change in its libraries or the versions of those libraries can break the application.
+Also, what if you can’t install packages into the global site-packages directory? For instance, on a shared host.
+
+In all these cases, virtual environments can help you. They have their own installation directories and they don’t share libraries with other virtual environments.
+
+Currently, there are two common tools for creating Python virtual environments:
+venv is available by default in Python 3.3 and later, and installs pip and setuptools into created virtual environments in Python 3.4 and later.
+virtualenv needs to be installed separately, but supports Python 2.7+ and Python 3.3+, and pip, setuptools and wheel are always installed into created virtual environments by default (regardless of Python version).
+
+The basic usage is like so:
+
+Using venv:
+
+python3 -m venv <DIR>
+source <DIR>/bin/activate
+
+
+
+
+
+
+Using virtualenv:
+
+virtualenv <DIR>
+source <DIR>/bin/activate
+
+
+
+
+
+
+For more information, see the venv docs or the virtualenv docs.
+The use of source under Unix shells ensures that the virtual environment’s variables are set within the current shell, and not in a subprocess (which then disappears, having no useful effect).
+In both of the above cases, Windows users should _not_ use the source command, but should rather run the activate script directly from the command shell like so:
+
+
+<DIR>\Scripts\activate
+
+
+
+Managing multiple virtual environments directly can become tedious, so the dependency management tutorial introduces a higher level tool, Pipenv, that automatically manages a separate virtual environment for each project and application that you work on.
+
+
+
+
+
+Use pip for Installing
+pip is the recommended installer. Below, we’ll cover the most common usage scenarios. For more detail, see the pip docs, which includes a complete Reference Guide.
+Installing from PyPI
+The most common usage of pip is to install from the Python Package Index using a requirement specifier. Generally speaking, a requirement specifier is composed of a project name followed by an optional version specifier. PEP 440 contains a full specification of the currently supported specifiers. Below are some examples.
+To install the latest version of “SomeProject”:
+
+
+
+python -m pip install "SomeProject"
+
+
+
+
+
+To install a specific version:
+
+python -m pip install "SomeProject==1.4"
+
+
+
+
+
+To install greater than or equal to one version and less than another:
+
+
+python -m pip install "SomeProject>=1,<2"
+
+
+
+
+
+
+To install a version that’s “compatible” with a certain version: 4
+
+python -m pip install "SomeProject~=1.4.2"
+
+
+
+
+
+
+In this case, this means to install any version “==1.4.*” version that’s also “>=1.4.2”.
+
+Source Distributions vs Wheels
+pip can install from either Source Distributions (sdist) or Wheels, but if both are present on PyPI, pip will prefer a compatible wheel.
+Wheels are a pre-built distribution format that provides faster installation compared to Source Distributions (sdist), especially when a project contains compiled extensions.
+If pip does not find a wheel to install, it will locally build a wheel and cache it for future installs, instead of rebuilding the source distribution in the future.
+
+
+
+Upgrading packages
+Upgrade an already installed SomeProject to the latest from PyPI.
+
+python -m pip install --upgrade SomeProject
+
+
+
+Installing to the User Site
+To install packages that are isolated to the current user, use the --user flag:
+
+python -m pip install --user SomeProject
+
+
+
+
+For more information see the User Installs section from the pip docs.
+
+Note that the --user flag has no effect when inside a virtual environment - all installation commands will affect the virtual environment.
+If SomeProject defines any command-line scripts or console entry points, --user will cause them to be installed inside the user base’s binary directory, which may or may not already be present in your shell’s PATH. (Starting in version 10, pip displays a warning when installing any scripts to a directory outside PATH.) If the scripts are not available in your shell after installation, you’ll need to add the directory to your PATH:
+On Linux and macOS you can find the user base binary directory by running python -m site --user-base and adding bin to the end. For example, this will typically print ~/.local (with ~ expanded to the absolute path to your home directory) so you’ll need to add ~/.local/bin to your PATH. You can set your PATH permanently by modifying ~/.profile.
+On Windows you can find the user base binary directory by running py -m site --user-site and replacing site-packages with Scripts. For example, this could return C:\Users\Username\AppData\Roaming\Python36\site-packages so you would need to set your PATH to include C:\Users\Username\AppData\Roaming\Python36\Scripts. You can set your user PATH permanently in the Control Panel. You may need to log out for the PATH changes to take effect.
+
+
+Requirements files
+Install a list of requirements specified in a Requirements File.
+
+python -m pip install -r requirements.txt
+Installing from VCS
+Install a project from VCS in “editable” mode. For a full breakdown of the syntax, see pip’s section on VCS Support.
+
+python -m pip install -e git+https://git.repo/some_pkg.git#egg=SomeProject          # from git
+python -m pip install -e hg+https://hg.repo/some_pkg#egg=SomeProject                # from mercurial
+python -m pip install -e svn+svn://svn.repo/some_pkg/trunk/#egg=SomeProject         # from svn
+python -m pip install -e git+https://git.repo/some_pkg.git@feature#egg=SomeProject  # from a branch
+
+
+
+Installing from other Indexes
+Install from an alternate index
+
+python -m pip install --index-url http://my.package.repo/simple/ SomeProject
+Search an additional index during install, in addition to PyPI
+
+python -m pip install --extra-index-url http://my.package.repo/simple SomeProject
+
+
+
+Installing from a local src tree
+Installing from local src in Development Mode, i.e. in such a way that the project appears to be installed, but yet is still editable from the src tree.
+
+python -m pip install -e <path>
+You can also install normally from src
+
+python -m pip install <path>
+Installing from local archives
+
+
+
+Install a particular source archive file.
+
+python -m pip install ./downloads/SomeProject-1.0.4.tar.gz
+Install from a local directory containing archives (and don’t check PyPI)
+
+python -m pip install --no-index --find-links=file:///local/dir/ SomeProject
+python -m pip install --no-index --find-links=/local/dir/ SomeProject
+python -m pip install --no-index --find-links=relative/dir/ SomeProject
+
+
+
+
+Installing from other sources
+To install from other data sources (for example Amazon S3 storage) you can create a helper application that presents the data in a PEP 503 compliant index format, and use the --extra-index-url flag to direct pip to use that index.
+
+./s3helper --port=7777
+python -m pip install --extra-index-url http://localhost:7777 SomeProject
+
+
+
+Installing Prereleases
+Find pre-release and development versions, in addition to stable versions. By default, pip only finds stable versions.
+
+python -m pip install --pre SomeProject
+Installing Setuptools “Extras”
+
+
+
+
+Install setuptools extras.
+
+$ python -m pip install SomePackage[PDF]
+$ python -m pip install SomePackage[PDF]==3.0
+$ python -m pip install -e .[PDF]==3.0  # editable project in current directory
+
+
+
+
+1 “Secure” in this context means using a modern browser or a tool like curl that verifies SSL certificates when downloading from https URLs.
+
+2
+Depending on your platform, this may require root or Administrator access. pip is currently considering changing this by making user installs the default behavior.
+
+3
+Beginning with Python 3.4, venv (a stdlib alternative to virtualenv) will create virtualenv environments with pip pre-installed, thereby making it an equal alternative to virtualenv.
+
+4
+The compatible release specifier was accepted in PEP 440 and support was released in setuptools v8.0 and pip v6.0
