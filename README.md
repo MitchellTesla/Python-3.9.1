@@ -3,7 +3,7 @@ Python 3.9.1 - Released on February 13, 2021
 
 MITCHΞLL (WIP) experimental repositories under construction
 
-This “Python library” contains several different kinds of components, modifications, and experimental testing 
+This “Python library” contains several different kinds of components, modifications, and active experimental testing 
 done by Justin Mitchell. Treat all branches besides 'main' as such! 
 (MitchellTesla) Keep notice that revisions and the experimental test branches may have bugs and issues from time to time.
 
