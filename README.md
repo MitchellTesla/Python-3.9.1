@@ -7,7 +7,7 @@ This “Python library” contains several different kinds of components, modifi
 done by Justin Mitchell. Treat all branches besides 'main' as such! 
 (MitchellTesla) Keep notice that revisions and the experimental test branches may have bugs and issues from time to time.
 
-The 'main' branch has NO Modifications or Integrations to the  Python 3.9.1 release, and the libraries archive can be downloaded and unpacked. 
+The 'main' branch has NO Modifications or Integrations to the Python 3.9.1 stable release, and the standard libraries archive can be downloaded and unpacked in main. 
 
 
 To Download the archive containing all the documents for this version of Python 3.9.1 in 
