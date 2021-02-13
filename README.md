@@ -1,8 +1,10 @@
 # Python-3.9.1
-Python 3.9.1 - MITCHELL's Library 
+Python 3.9.1 - Released on February 13, 2021
 
-This “Python library” contains several different kinds of components, mods, and experimental tests done by Justin Mitchell.
-Treat it as such! (MitchellTesla) revised and experimental tests
+MITCHELL's Library 
+
+This “Python library” contains several different kinds of components, modifications, experimental testing and integrations
+done by Justin Mitchell. Treat it as such! (MitchellTesla) revisions and experimental test repos may have bugs and issues.
 
 The library contains data types that would normally be considered part of the “core” of a language, such as numbers and lists. For
 these types, the Python language core defines the form of literals and places some constraints on their semantics, but does
