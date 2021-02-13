@@ -1,25 +1,23 @@
 # Python-3.9.1
 Python 3.9.1 - Released on February 13, 2021
-MITCHELL
+MITCHELL (WIP)
 
-The main branch repositories has no Modifications or Integrations done to Python 3.9.1 release, and the libraries archive
-can be downloaded and unpacked. Python 3.9.1 Documentation 
+The main branch repositories has no Modifications or Integrations done to Python 3.9.1 release, and the standard libraries archive
+can be downloaded and unpacked. 
 
-This “Python library” contains several different kinds of components, modifications, experimental testing and integrations
+This “Python library” contains several different kinds of components, modifications, and experimental testing 
 done by Justin Mitchell. Treat it as such! (MitchellTesla) revisions and experimental test repos may have bugs and issues.
-To Download the archive containing all the documents for this version of Python 3.9.1 in PDF, HTML, Plain Text, and EPUB check the main repository branch
+To Download the archive containing all the documents for this version of Python 3.9.1 in 
+PDF, HTML, Plain Text, and EPUB clone or copy the main repository for the stable version or go to ( docs.python.org )
 
+Any and all other branches should be considered experimental development/testing that will be updated frequently, and not merged with main.
 
-
-Unpacking
+THE Unpacking
 Unix users should download the .tar.bz2 archives; these are bzipped tar archives and can be handled in the usual way using tar and the bzip2 program. The InfoZIP unzip program can be used to handle the ZIP archives if desired. The .tar.bz2 archives provide the best compression and fastest download times.
-
 Windows users can use the ZIP archives since those are customary on that platform. These are created on Unix using the InfoZIP zip program.
+Problems?-If you have comments or suggestions for the Python documentation, please send email to docs@python.org.
 
-Problems
-If you have comments or suggestions for the Python documentation, please send email to docs@python.org.
-
-
+PYTHON 3.9.1 Stable Release
 The library contains data types that would normally be considered part of the “core” of a language, such as numbers and lists. For
 these types, the Python language core defines the form of literals and places some constraints on their semantics, but does
 not fully define the semantics. (On the other hand, the language core does define syntactic properties like the spelling and
