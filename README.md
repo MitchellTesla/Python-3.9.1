@@ -8,7 +8,7 @@ This “Python library” contains several different kinds of components, modifi
 
 Keep notice that experimental branches may have bugs and issues from time to time.
 
-The 'main' branch has NO Modifications or Integrations to the Python 3.9.1 stable release, and the standard libraries archive can be downloaded and unpacked in main. 
+The 'main' branch/repository has NO Modifications or Integrations to the Python 3.9.1 stable release, and the standard libraries archive can be downloaded and unpacked in main. 
 
 
 To Download the archive containing all the documents for this version of Python 3.9.1 in 
@@ -16,7 +16,7 @@ PDF, HTML, Plain Text, and/or EPUB clone the  'main'  repository for the stable 
 
 
 
-Any and all other branches should be considered "experimental" development/testing that will be updated frequently, and not merged with main.
+Any and all other branches should be considered "experimental" development/testing that will be updated frequently.
 
 
 
