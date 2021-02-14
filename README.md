@@ -1,7 +1,6 @@
 # Python-3.9.1
 Python 3.9.1 - Released on February 13, 2021
 
-experimental repositories under construction
 
 This “Python library” contains several different kinds of components, and modifications done by Justin Mitchell.
 Treat all branches besides 'main' as such , experimental! 
@@ -50,10 +49,5 @@ in which you read the sections of this manual, it helps to start with chapter Bu
 manual assumes familiarity with this material.
 Let the show begin!
 
-1.1 Notes on availability
-• An “Availability: Unix” note means that this function is commonly found on Unix systems. It does not make any
-claims about its existence on a specific operating system.
-• If not separately noted, all functions that claim “Availability: Unix” are supported on Mac OS X, which builds on
-a Unix core.
 
 The Python Library Reference, Release 3.9.1  Feb. 13, 2021 (J.Mitchell)
