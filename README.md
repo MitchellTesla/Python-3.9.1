@@ -1,19 +1,25 @@
 # Python-3.9.1
 Python 3.9.1 - Released on February 13, 2021
 
-MITCHΞLL (WIP)
+MITCHΞLL (WIP) experimental repositories under construction
 
-This “Python library” contains several different kinds of components, modifications, and experimental testing 
-done by Justin Mitchell. Treat it as such! 
-(MitchellTesla) revisions and experimental test repos may have bugs and issues.
-The main branch repositories has no Modifications or Integrations done to Python 3.9.1 release, and the standard 
-libraries archive can be downloaded and unpacked. 
+This “Python library” contains several different kinds of components, modifications, and experimental test branches created by Justin Mitchell.
+(MitchellTesla) Treat all branches besides 'main' as such! 
+
+Keep notice that experimental branches may have bugs and issues from time to time.
+
+The 'main' branch/repository has NO Modifications or Integrations to the Python 3.9.1 stable release, and the standard libraries archive can be downloaded and unpacked in main. 
 
 
 To Download the archive containing all the documents for this version of Python 3.9.1 in 
-PDF, HTML, Plain Text, and EPUB clone or copy the main repository for the stable version or go to (docs.python.org)
+PDF, HTML, Plain Text, and/or EPUB clone the  'main'  repository for the stable version or go to (docs.python.org)
 
-Any and all other branches should be considered experimental development/testing that will be updated frequently, and not merged with main.
+
+
+Any and all other branches should be considered "experimental" development/testing that will be updated frequently.
+
+
+
 
 THE Unpacking
 Unix users should download the .tar.bz2 archives; these are bzipped tar archives and can be handled in the usual way using tar and the bzip2 program. The InfoZIP unzip program can be used to handle the ZIP archives if desired. The .tar.bz2 archives provide the best compression and fastest download times.
