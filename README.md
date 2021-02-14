@@ -5,7 +5,7 @@ Python 3.9.1 - Released on February 13, 2021
 The “Python library” contains several different kinds of components, and some branch modifications done by Justin Mitchell.
 Treat all branches besides 'main' as such , experimental! 
 
-The 'main' branch/repository has NO Modifications or Integrations to the Python 3.9.1 stable release, and the standard archive can be downloaded and unpacked in main or viewed unpacked in docs. 
+The 'main' branch/repository has NO Modifications or Integrations to the Python 3.9.1 stable release, and the standard archive can be downloaded and unpacked in this branch or viewed unpacked in docs. 
 
 
 To Download the archive containing all the documents for this version of Python 3.9.1 in 
