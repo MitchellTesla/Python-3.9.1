@@ -1,0 +1,48 @@
+Ensure you can run Python from the command line
+Before you go any further, make sure you have Python and that the expected version is available from your command line. You can check this by running:
+
+python --version
+You should get some output like Python 3.6.3. If you do not have Python, please install the latest 3.x version from python.org or refer to the Installing Python section of the Hitchhiker’s Guide to Python.
+
+Note If you’re a newcomer and you get an error like this:
+>>>
+>>> python --version
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'python' is not defined
+It’s because this command and other suggested commands in this tutorial are intended to be run in a shell (also called a terminal or console). See the Python for Beginners getting started tutorial for an introduction to using your operating system’s shell and interacting with Python.
+
+Note If you’re using an enhanced shell like IPython or the Jupyter notebook, you can run system commands like those in this tutorial by prefacing them with a ! character:
+In [1]: import sys
+        !{sys.executable} --version
+Python 3.6.3
+It’s recommended to write {sys.executable} rather than plain python in order to ensure that commands are run in the Python installation matching the currently running notebook (which may not be the same Python installation that the python command refers to).
+
+Note Due to the way most Linux distributions are handling the Python 3 migration, Linux users using the system Python without creating a virtual environment first should replace the python command in this tutorial with python3 and the python -m pip command with python3 -m pip --user. Do not run any of the commands in this tutorial with sudo: if you get a permissions error, come back to the section on creating virtual environments, set one up, and then continue with the tutorial as written.
+Ensure you can run pip from the command line
+Additionally, you’ll need to make sure you have pip available. You can check this by running:
+
+python -m pip --version
+If you installed Python from source, with an installer from python.org, or via Homebrew you should already have pip. If you’re on Linux and installed using your OS package manager, you may have to install pip separately, see Installing pip/setuptools/wheel with Linux Package Managers.
+
+If pip isn’t already installed, then first try to bootstrap it from the standard library:
+
+python -m ensurepip --default-pip
+If that still doesn’t allow you to run python -m pip:
+
+Securely Download get-pip.py 1
+
+Run python get-pip.py. 2 This will install or upgrade pip. Additionally, it will install setuptools and wheel if they’re not installed already.
+
+Warning Be cautious if you’re using a Python install that’s managed by your operating system or another package manager. get-pip.py does not coordinate with those tools, and may leave your system in an inconsistent state. You can use python get-pip.py --prefix=/usr/local/ to install in /usr/local which is designed for locally-installed software.
+Ensure pip, setuptools, and wheel are up to date
+While pip alone is sufficient to install from pre-built binary archives, up to date copies of the setuptools and wheel projects are useful to ensure you can also install from source archives:
+
+python -m pip install --upgrade pip setuptools wheel
+Optionally, create a virtual environment
+See section below for details, but here’s the basic venv 3 command to use on a typical Linux system:
+
+python3 -m venv tutorial_env
+source tutorial_env/bin/activate
+This will create a new virtual environment in the tutorial_env subdirectory, and configure the current shell to use it as the default python environment.
+
