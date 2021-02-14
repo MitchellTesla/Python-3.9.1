@@ -1,0 +1,65 @@
+What's New In Python 3.10
+*************************
+
+Release:
+   3.10.0a0
+
+Date:
+   May 20, 2020
+
+This article explains the new features in Python 3.10, compared to
+3.9.
+
+For full details, see the changelog.
+
+Note:
+
+  Prerelease users should be aware that this document is currently in
+  draft form. It will be updated substantially as Python 3.10 moves
+  towards release, so it's worth checking back even after reading
+  earlier versions.
+
+
+Summary -- Release highlights
+=============================
+
+
+New Features
+============
+
+
+Other Language Changes
+======================
+
+
+New Modules
+===========
+
+* None yet.
+
+
+Improved Modules
+================
+
+
+Optimizations
+=============
+
+
+Build and C API Changes
+=======================
+
+
+Deprecated
+==========
+
+
+Removed
+=======
+
+
+Porting to Python 3.10
+======================
+
+This section lists previously described changes and other bugfixes
+that may require changes to your code.
